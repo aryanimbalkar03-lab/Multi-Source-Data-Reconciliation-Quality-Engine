@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Archivo', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Clean light "analyst report" ground */
+  --color-ground: #f6f7f9;
+  --color-panel: #ffffff;
+  --color-panel-2: #fafbfc;
+  --color-line: #e6e8ec;
+  --color-line-soft: #eef0f3;
+  --color-ink: #10131a;
+  --color-ink-dim: #56607080;
+  --color-ink-mid: #566070;
+  --color-ink-faint: #98a1b0;
+
+  /* Signal palette tuned for white backgrounds (AA on white) */
+  --color-match: #0f9d63;
+  --color-minor: #b7791f;
+  --color-major: #d92d20;
+  --color-accent: #2f5fff;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(1100px 520px at 90% -20%, rgba(47, 95, 255, 0.05), transparent 60%),
+    var(--color-ground);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(47, 95, 255, 0.18);
+}
+
+/* Hide scrollbars until scrolling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+*:hover::-webkit-scrollbar-thumb {
+  background: #d3d7de;
+}
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 5px;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
