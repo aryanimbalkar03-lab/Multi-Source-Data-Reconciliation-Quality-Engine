@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd \"Data Quality Engine\" && pnpm install && pnpm run build",
+  "outputDirectory": "Data Quality Engine/dist",
+  "framework": "vite"
+}
