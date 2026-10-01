@@ -1,6 +1,6 @@
  **Indian Capital Markets · Cross-Venue Data Integrity · Automated Quality Pipeline**
 
-A production-grade data reconciliation engine that validates financial data across **NSE**, **BSE**, **AMFI**, and **Yahoo Finance** — detecting discrepancies, adjudicating conflicts via three-way source comparison, and surfacing actionable insights through an analyst drill-down dashboard.
+A  data reconciliation engine that validates financial data across **NSE**, **BSE**, **AMFI**, and **Yahoo Finance** — detecting discrepancies, adjudicating conflicts via three-way source comparison, and surfacing actionable insights through an analyst drill-down dashboard.
 
 ![Build](https://img.shields.io/badge/build-passing-brightgreen)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue)
@@ -81,7 +81,7 @@ This engine automatically:
 |-------|-----------|
 | **Frontend** | React 18, TypeScript 5.7, Tailwind CSS 4, Recharts |
 | **Backend / ETL** | Python 3.11, Pandas, yfinance |
-| **Database** | SQLite (dev) / PostgreSQL (prod) |
+| **Database** |  (dev) /  (prod) |
 | **Build** | Vite 6, pnpm |
 | **Deployment** | GitHub Actions (scheduled pipeline), Vercel (dashboard) |
 
@@ -201,3 +201,18 @@ python -m src.recon.dashboard_export --backfill 8
 ## 📄 License
 
 MIT © [aryanimbalkar03-lab](https://github.com/aryanimbalkar03-lab)
+
+
+## Scope
+- 22 AMFI schemes
+- Hardcoded index constituents
+- 24 records adjudicated via Yahoo
+
+
+## Limitations
+- Proof of concept limited to small data samples
+- Lacks dynamic scaling and comprehensive error handling
+
+
+## Tests
+- Ensure automated quality checks validate output accuracy.
